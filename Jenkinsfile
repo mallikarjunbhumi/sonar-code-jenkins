@@ -21,13 +21,13 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
   }
   stage ('Package') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package"
   }
   stage ('Verify') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
   }
   stage ('Install') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install -D"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
   }
   stage ('Deliver & Deployment') {
       sh 'curl -u admin:redhat@123 -T target/**.war "http://3.111.188.254:8080/manager/text/deploy?path=/malli&update=true"'
