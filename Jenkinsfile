@@ -3,9 +3,6 @@ node {
   stage('Prepare') {
       git url: 'https://github.com/mallikarjunbhumi/sonar-code-jenkins.git', branch: 'main'
       mvnHome = tool 'maven'
-   }
-  stage ('Code Quality') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore sonar:sonar -DskipTests"
   }
 
   stage ('Clean') {
