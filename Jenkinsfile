@@ -4,10 +4,7 @@ node {
       git url: 'https://github.com/mallikarjunbhumi/sonar-code-jenkins.git', branch: 'main'
       mvnHome = tool 'maven'
   }
-
-  stage ('Clean') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean"
-  }
+   
   stage ('Validate') {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore validate"
   }
