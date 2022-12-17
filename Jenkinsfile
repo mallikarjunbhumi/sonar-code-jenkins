@@ -27,9 +27,9 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
   }
   stage ('Deliver & Deployment') {
-      sh 'curl -u admin:redhat@123 -T target/**.war "http://65.0.85.74:8080/manager/text/deploy?path=/malli&update=true"'
+      sh 'curl -u admin:redhat@123 -T target/**.war "http://13.233.128.154:8080/manager/text/deploy?path=/malli&update=true"'
   }
   stage ('SmokeTest') {
-      sh 'curl --retry-delay 10 --retry 5 "http://65.0.85.74:8080/malli"'
+      sh 'curl --retry-delay 10 --retry 5 "http://13.233.128.154:8080/malli"'
   }
 }
