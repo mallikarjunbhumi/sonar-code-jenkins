@@ -30,7 +30,7 @@
 		<sonar.organization>nandhu</sonar.organization>
 		<sonar.projectKey>malli_bhumi</sonar.projectKey>
 		<sonar.host.url>http://sonarcloud.io</sonar.host.url>
-		<sonar.login>sqp_941b7d389caf25801141049d42b14a8aa3a1a01c</sonar.login>
+		<sonar.login>sqp_941b7d389caf25801141049d42b14a8aa3a1a01c </sonar.login>
 	</properties>
 	
 	<!-- Jfrog Integration with POM.xml file -->
